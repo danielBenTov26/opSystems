@@ -1,0 +1,8 @@
+app: main.o sim_mem.o
+    gcc main.o sim_mem.o -o app
+
+main.o: main.cpp sim_mem.h
+    gcc -c main.cpp
+
+sim_mem.o: sim_mem.cpp sim_mem.h
+    gcc -c sim_mem.cpp
